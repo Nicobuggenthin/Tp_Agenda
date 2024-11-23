@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_Agenda.Web", "TP_Agenda.Web.csproj", "{B0A0F9D6-296E-40B9-BD67-C898367059E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_Agenda.Manager", "..\TP_Agenda.Manager\TP_Agenda.Manager.csproj", "{B70F5365-7425-4DB4-8F49-F4B8DFF1D88A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0A0F9D6-296E-40B9-BD67-C898367059E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A0F9D6-296E-40B9-BD67-C898367059E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A0F9D6-296E-40B9-BD67-C898367059E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A0F9D6-296E-40B9-BD67-C898367059E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70F5365-7425-4DB4-8F49-F4B8DFF1D88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70F5365-7425-4DB4-8F49-F4B8DFF1D88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70F5365-7425-4DB4-8F49-F4B8DFF1D88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70F5365-7425-4DB4-8F49-F4B8DFF1D88A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {601C0EEB-1C76-4233-853F-4C6BEC3DA88C}
+	EndGlobalSection
+EndGlobal
