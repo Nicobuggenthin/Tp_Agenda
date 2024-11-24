@@ -1,0 +1,21 @@
+# Ignorar la carpeta de configuración de Visual Studio
+.vs/
+
+# Ignorar archivos binarios generados por Visual Studio
+bin/
+obj/
+
+# Ignorar archivos de configuración de usuario
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Ignorar archivos de configuración de Visual Studio Code (si usas VS Code)
+.vscode/
+
+# Ignorar archivos de dependencias de NPM (si es un proyecto Node.js)
+node_modules/
+
+# Ignorar archivos de log
+*.log
