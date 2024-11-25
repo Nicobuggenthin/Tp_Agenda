@@ -3,6 +3,7 @@ using Agenda.Managers.Repos;
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 
 namespace Agenda.Managers.Managers
 {
@@ -46,8 +47,12 @@ namespace Agenda.Managers.Managers
         // Obtener todos los eventos
         public IEnumerable<Evento> GetEventos()
         {
-            return _repo.GetEventos();
+            string usuarioId = ObtenerUsuarioId(); // Obtener el ID del usuario actual
+            var eventos = _repo.GetEventos(); // Obtener todos los eventos (sin filtro por usuario por ahora)
+            //Debug.WriteLine("Eventos recuperados: " + eventos.Count()); // Esto te ayudará a ver si se están recuperando correctamente
+            return eventos;
         }
+
 
         // Obtener un evento por su ID
         public Evento GetEvento(int idEvento)
@@ -58,7 +63,10 @@ namespace Agenda.Managers.Managers
         // Crear un nuevo evento
         public int CrearEvento(Evento evento)
         {
+            // Aseguramos que se asignen FechaAlta y UsuarioId correctamente
             evento.FechaAlta = DateTime.Now; // Asignamos la fecha de alta
+           // evento.UsuarioId = ObtenerUsuarioId(); // Aseguramos que el usuario esté asignado correctamente
+
             return _repo.CrearEvento(evento); // Llamamos al repositorio para crear el evento
         }
 

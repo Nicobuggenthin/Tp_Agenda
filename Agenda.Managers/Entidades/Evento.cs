@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
+
 
 namespace Agenda.Managers.Entidades
 {
@@ -14,15 +16,21 @@ namespace Agenda.Managers.Entidades
     }
     public class Evento
     {
+        public int IdEvento { get; set; }
+        public string Titulo { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Descripcion { get; set; }
+        public string Ubicacion { get; set; }
+        public string Estado { get; set; }
+        public DateTime FechaAlta { get; set; }
+        public DateTime? FechaModificacion { get; set; }
+        //public string UsuarioId { get; set; }
+        public DateTime? FechaBaja { get; set; }
 
-        public int IdEvento { get; set; } // Identificador único del evento
-        public string Titulo { get; set; } = null!; // Título del evento
-        public DateTime Fecha { get; set; } // Fecha del evento
-        public string Descripcion { get; set; } = null!; // Descripción del evento
-        public string Ubicacion { get; set; } = null!; // Ubicación del evento
-        public EstadoEvento Estado { get; set; } // Estado del evento (Pendiente, Realizado, No realizado)
-        public DateTime FechaAlta { get; set; } //Propiedad para la fecha alta
-        public DateTime? FechaBaja { get; set; } // Fecha de baja (soft delete)
-        public DateTime? FechaModificacion { get; set; } // Fecha de última modificación (puede ser null si no se ha modificado)
+        // Para el dropdown de Estados
+        public List<SelectListItem> ListaEstadosItem { get; set; }
+
+        // Usado para pasar el evento completo de vuelta
+        public Evento Model { get; set; }
     }
 }

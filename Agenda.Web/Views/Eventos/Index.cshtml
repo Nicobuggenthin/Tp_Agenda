@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Agenda.Managers.Entidades.Evento>
+
+@{
+    ViewData["Title"] = "Eventos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eventos</h1>
+
+<p>
+    <a href="@Url.Action("Create")">Crear Nuevo Evento</a>
+</p>
+
+<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Ubicación</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evento in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => evento.Titulo)</td>
+                <td>@Html.DisplayFor(modelItem => evento.Fecha)</td>
+                <td>@Html.DisplayFor(modelItem => evento.Descripcion)</td>
+                <td>@Html.DisplayFor(modelItem => evento.Ubicacion)</td>
+                <td>@Html.DisplayFor(modelItem => evento.Estado)</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = evento.IdEvento })">Editar</a> |
+                    <a href="@Url.Action("Details", new { id = evento.IdEvento })">Detalles</a> |
+                    <a href="@Url.Action("Delete", new { id = evento.IdEvento })">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
